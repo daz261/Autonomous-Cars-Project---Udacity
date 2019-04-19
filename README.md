@@ -8,8 +8,9 @@ The purpose of this research project was to identify vulnerabilities in autonomo
  
 <hr>
 <h2>Udacity Behavioral Cloning Project</h2>
-The project consists of a simulator that is able to emulate a self-driving car, by provind two user modes:
+The project uses a neural network to clone car driving behavior. It is a supervised regression problem between the car steering angles and the road images in front of a car. The project consists of a simulator that is able to emulate a self-driving car, by provind two user modes:
 <h4>Training</h4>
+The 
 <h4>Autonomous Mode</h4>
 All the code is uploaded to the Attack folder. More explanations for how the code works are in my last presentations (Week 7 & 8). 
 
