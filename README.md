@@ -45,7 +45,7 @@ In the attack models that we propose, we try to make use of this vulnerability. 
 <h2>Results and Conclusion</h2>
 The results that we obtained are summarized in the image below. The tampered image was fed into the h5 model and in autonomous mode and by using a differential evolution algorithm, I noticed that the neural network mis-predicted the stering angle: from 4.65 to 0.0017, which represents a significant perturbation for the system. Visually, in Udacity, we may see how the car takes the wrong turn or steers the angle very little, increasing the risk of getting out of track. 
 
-In a real world scenario, if an attacker tampers with the input of the neural system of an autonomous car, it can take control over it and cause purposeful accidents.\n
+<p>In a real world scenario, if an attacker tampers with the input of the neural system of an autonomous car, it can take control over it and cause purposeful accidents.</p>
 
 <img src = "results.png">
 
