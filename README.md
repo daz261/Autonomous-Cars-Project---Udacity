@@ -23,17 +23,25 @@ In the training mode, Udacity gathers images from the three cameras: left, cente
  <li>Randomly altering image brightness (lighter or darker)</li>
  <li>Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).</li>
 </ul>
-The data collected in the training mode is stored in a .csv list that is used to generate a pretrained model (.h5 file).
+The data collected in the training mode is stored in a .csv list that is used to generate a pretrained model (.h5 file) after autonomous mdoe is launched.
 
 <img src = "Training.png">
 
 <h4>Autonomous Mode</h4>
 
-In autonomous mode, pre-processed images are fed into the CNN which outputs the prediction for the steering angle. Mean squared error is used for the loss function to measure how close the model predicts to the given steering angle for each image.
+In autonomous mode, pre-processed images are fed into the CNN which outputs the prediction for the steering angle. Mean squared error is used for the loss function to measure how close the model predicts to the given steering angle for each image. The output of the autonomous mode phase, inclusing steering wheel angle and other such paramaters are stored in .h5 file. 
 <img src = "AutonomousMode.png">
 Source: https://github.com/naokishibuya/car-behavioral-cloning 
 
 <h2>Attack</h2>
 The proposed attack model that I used is called the One Pixel Attack for Neural Networks, which desribed in the paper with the same name: Su, Jiawei, Danilo Vasconcellos Vargas, and Kouichi Sakurai. <a href ="https://arxiv.org/pdf/1710.08864.pdf ">  "One pixel attack for fooling deep neural networks." </a> IEEE Transactions on Evolutionary Computation (2019).
 
+The scheme of the Udacity model is described in the image below. However, we notice that it contains a vulnerability that we can later on exploit: <b>the model allows users to feeed in tampered input after training mode is completed, increasing the vulnerability of a cyber attacks</b>.
+
+
+In the attack models that we propose, we try to make use of this vulnerability. The attack mode scheme is quite straightforward In the attack model, we feed in a tampered pre-processed image, where only pixel was modified, after the training mode completes. Then, we launch autnomous mode and w
+<img src = "onepixel.png">
+
 <h2>Results and Conclusion</h2>
+
+<img src = "results.png">
