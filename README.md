@@ -23,13 +23,17 @@ In the training mode, Udacity gathers images from the three cameras: left, cente
  <li>Randomly altering image brightness (lighter or darker)</li>
  <li>Using the left/right images is useful to train the recovery driving scenario. The horizontal translation is useful for difficult curve handling (i.e. the one after the bridge).</li>
 </ul>
-
-Source: https://github.com/naokishibuya/car-behavioral-cloning 
+The data collected in the training mode is stored in a .csv list that is used to generate a pretrained model (.h5 file).
 
 <img src = "Training.png">
+
 <h4>Autonomous Mode</h4>
-All the code is uploaded to the Attack folder. More explanations for how the code works are in my last presentations (Week 7 & 8). 
 
+In autonomous mode, pre-processed images are fed into the CNN which outputs the prediction for the steering angle. Mean squared error is used for the loss function to measure how close the model predicts to the given steering angle for each image.
 <img src = "AutonomousMode.png">
+Source: https://github.com/naokishibuya/car-behavioral-cloning 
 
-The instructions for how to install the Udacity self-driving car simulator are in the document under Resources. You can find all the papers referenced in that document too. 
+<h2>Attack</h2>
+The proposed attack model that I used is called the One Pixel Attack for Neural Networks, which desribed in the paper with the same name: Su, Jiawei, Danilo Vasconcellos Vargas, and Kouichi Sakurai. <a href ="https://arxiv.org/pdf/1710.08864.pdf ">  "One pixel attack for fooling deep neural networks." </a> IEEE Transactions on Evolutionary Computation (2019).
+
+<h2>Results and Conclusion</h2>
