@@ -38,14 +38,14 @@ Source: https://github.com/naokishibuya/car-behavioral-cloning
 
 <p>The scheme of the Udacity model is described in the image below. However, we notice that it contains a vulnerability that we can later on exploit: <b>the model allows users to feeed in tampered input after training mode is completed, increasing the vulnerability of a cyber attacks</b>.</p>
 
-<p>In the attack models that we propose, we try to make use of this vulnerability. In the attack model, we feed in a tampered pre-processed image, where only pixel was modified, after the training mode completes. Then, we launch autnomous mode and we observe how the steering angle is influenced by a small change in one of the images that are fed into the neural network.</p>
+<p>In the attack models that I propose, I try to make use of this vulnerability. In the attack model, we feed in a tampered pre-processed image, where only pixel was modified, after the training mode completes. Then, we launch autnomous mode and we observe how the steering angle is influenced by a small change in one of the images that are fed into the neural network.</p>
 
 <img src = "onepixel.png">
 
 <h2>Results and Conclusion</h2>
-<p>The results that we obtained are summarized in the image below. The tampered image was fed into the h5 model and in autonomous mode and by using a differential evolution algorithm, I noticed that the neural network mis-predicted the stering angle: from 4.65 to 0.0017, which represents a significant perturbation for the system. Visually, in Udacity, we may see how the car takes the wrong turn or steers the angle very little, increasing the risk of getting out of track. </p>
+<p>The results that we obtained are summarized in the image below. The tampered image was fed into the h5 model and processed by the autonomous mode. By using a differential evolution algorithm, I noticed that the neural network mis-predicted the stering angle: from 4.65 to 0.0017, which represents a significant perturbation for the system. Visually, in Udacity, we may see how the car takes the wrong turn or steers the angle very little, increasing the risk of getting out of track. </p>
 
-<p>In a real world scenario, if an attacker tampers with the input of the neural system of an autonomous car, it can take control over it and cause purposeful accidents.</p>
+<p>In a real world scenario, if an attacker tampers with the input of the neural system of an autonomous car, it can take control over it and cause accidents.</p>
 
 <img src = "results.png">
 
