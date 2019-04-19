@@ -11,7 +11,11 @@ The purpose of this research project was to identify vulnerabilities in autonomo
 The project uses a neural network to clone car driving behavior. It is a supervised regression problem between the car steering angles and the road images in front of a car. The project consists of a simulator that is able to emulate a self-driving car, by provind two user modes:
 <h4>Training</h4>
 The 
+
+<img src = "Training.png">
 <h4>Autonomous Mode</h4>
 All the code is uploaded to the Attack folder. More explanations for how the code works are in my last presentations (Week 7 & 8). 
+
+<img src = "AutonomousMode.png">
 
 The instructions for how to install the Udacity self-driving car simulator are in the document under Resources. You can find all the papers referenced in that document too. 
