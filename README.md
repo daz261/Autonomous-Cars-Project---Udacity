@@ -3,7 +3,7 @@
 This repository contains the files that I worked on during my summer research internship at the Center of Cyber Security at NYU Abu Dhabi. 
 
 <h2>Purpose</h2>
-The purpose of this research project was to identify vulnerabilities in autonomous car systems, by looking into open-source self-driving car simulators, such as the <a href = "https://github.com/udacity/CarND-Behavioral-Cloning-P3"> Udacity Behavioral Cloning project </a>. The project explored the cyber security of these sources by implementing attacks such as the one-pixel attack, that tampered with the output (images) produced by the neural network of the self-driving car.
+The purpose of this research project was to identify vulnerabilities in autonomous car systems, by looking into open-source self-driving car simulators, such as the <a href = "https://github.com/udacity/CarND-Behavioral-Cloning-P3"> Udacity Behavioral Cloning project </a>. The project explored the cyber security of these sources by implementing attacks such as the one-pixel attack, that tampered with the output (images) produced by the neural network of the self-driving car. For the purpose of this project, I used Keras and Tensorflow as backend and I worked with a number of machine learning algorithms.
 
  
 <hr>
@@ -38,10 +38,15 @@ The proposed attack model that I used is called the One Pixel Attack for Neural 
 
 The scheme of the Udacity model is described in the image below. However, we notice that it contains a vulnerability that we can later on exploit: <b>the model allows users to feeed in tampered input after training mode is completed, increasing the vulnerability of a cyber attacks</b>.
 
-
-In the attack models that we propose, we try to make use of this vulnerability. The attack mode scheme is quite straightforward In the attack model, we feed in a tampered pre-processed image, where only pixel was modified, after the training mode completes. Then, we launch autnomous mode and w
+In the attack models that we propose, we try to make use of this vulnerability. The attack mode scheme is quite straightforward In the attack model, we feed in a tampered pre-processed image, where only pixel was modified, after the training mode completes. Then, we launch autnomous mode and we observe how the steering angle is influenced by a small change in one of the images that are fed into the neural network.
 <img src = "onepixel.png">
 
 <h2>Results and Conclusion</h2>
+The results that we obtained are summarized in the image below. The tampered image was fed into the h5 model and in autonomous mode and by using a differential evolution algorithm, I noticed that the neural network mis-predicted the stering angle: from 4.65 to 0.0017, which represents a significant perturbation for the system. Visually, in Udacity, we may see how the car takes the wrong turn or steers the angle very little, increasing the risk of getting out of track. 
 
+In a real world scenarion, is an attacker tampers the input of the neural system of an autonomous car, it can take control over it and cause accidents. 
 <img src = "results.png">
+
+
+
+
