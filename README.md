@@ -30,7 +30,7 @@ The data collected in the training mode is stored in a .csv list that is used to
 <h4>Autonomous Mode</h4>
 
 In autonomous mode, pre-processed images are fed into the CNN which outputs the prediction for the steering angle. Mean squared error is used for the loss function to measure how close the model predicts to the given steering angle for each image. The output of the autonomous mode phase, inclusing steering wheel angle and other such paramaters are stored in .h5 file. 
-<img src = "AutonomousMode.png">
+<img src = "AutonomousMode.png"><br>
 Source: https://github.com/naokishibuya/car-behavioral-cloning 
 
 <h2>Attack</h2>
